@@ -195,23 +195,52 @@
       <a class="pdf-btn" href="#" onclick="alert('PDF Curriculum')">📄 <span data-th="Open Curriculum PDF" data-en="Open Curriculum PDF">Open Curriculum PDF</span></a>
       <a class="web-btn" href="http://www.ee.kmitl.ac.th" target="_blank">🌐 <span data-th="เว็บไซต์ภาควิชา" data-en="Department Website">เว็บไซต์ภาควิชา</span></a>
     </div>
-    <div class="year-tabs">
-      <button class="year-tab active" onclick="switchYear(1)">ปี 1</button>
-      <button class="year-tab" onclick="switchYear(2)">ปี 2</button>
-      <button class="year-tab" onclick="switchYear(3)">ปี 3</button>
-      <button class="year-tab" onclick="switchYear(4)">ปี 4</button>
-    </div>
+    
+  <div class="plan-tabs">
+    <button class="plan-tab active" onclick="switchPlan(1)" data-th="แผน 1: โครงงาน/ปฏิบัติการ" data-en="Plan 1: Academic Project">แผน 1: โครงงาน/ปฏิบัติการ</button>
+    <button class="plan-tab" onclick="switchPlan(2)" data-th="แผน 2: สหกิจศึกษา" data-en="Plan 2: Cooperative Education">แผน 2: สหกิจศึกษา</button>
+  </div>
+
+  <div class="year-tabs">
+    <button class="year-tab active" onclick="switchYear(1)" data-th="ปี 1" data-en="Year 1">ปี 1</button>
+    <button class="year-tab" onclick="switchYear(2)" data-th="ปี 2" data-en="Year 2">ปี 2</button>
+    <button class="year-tab" onclick="switchYear(3)" data-th="ปี 3" data-en="Year 3">ปี 3</button>
+    <button class="year-tab" onclick="switchYear(4)" data-th="ปี 4" data-en="Year 4">ปี 4</button>
+  </div>
+
+  <div class="term-tabs">
+    <button class="term-tab active" onclick="switchTerm(1)" data-th="เทอม 1" data-en="Semester 1">เทอม 1</button>
+    <button class="term-tab" onclick="switchTerm(2)" data-th="เทอม 2" data-en="Semester 2">เทอม 2</button>
+    <button class="term-tab term-tab-summer" onclick="switchTerm(3)" data-th="เทอม 3" data-en="Summer">เทอม 3</button>
+  </div>
     <div class="curriculum-content" id="year-content">
-      <div class="subject-item"><div class="subject-dot"></div><div class="subject-name">Mathematics I</div><div class="subject-credit">3 หน่วยกิต</div></div>
-      <div class="subject-item"><div class="subject-dot"></div><div class="subject-name">Physics for Engineers</div><div class="subject-credit">3 หน่วยกิต</div></div>
-      <div class="subject-item"><div class="subject-dot"></div><div class="subject-name">Engineering Drawing</div><div class="subject-credit">3 หน่วยกิต</div></div>
-      <div class="subject-item"><div class="subject-dot"></div><div class="subject-name">Introduction to Programming</div><div class="subject-credit">3 หน่วยกิต</div></div>
-      <div class="subject-item"><div class="subject-dot"></div><div class="subject-name">English for Engineers I</div><div class="subject-credit">3 หน่วยกิต</div></div>
-      <div class="subject-item"><div class="subject-dot"></div><div class="subject-name">Basic Circuit Theory</div><div class="subject-credit">3 หน่วยกิต</div></div>
+      <div class="subject-item"><div class="subject-dot"></div><div class="subject-name">Calculus I</div><div class="subject-credit">3 หน่วยกิต</div></div>
+      <div class="subject-item"><div class="subject-dot"></div><div class="subject-name">General Physics I</div><div class="subject-credit">3 หน่วยกิต</div></div>
+      <div class="subject-item"><div class="subject-dot"></div><div class="subject-name">General Physics Laboratory I</div><div class="subject-credit">1 หน่วยกิต</div></div>
+      <div class="subject-item"><div class="subject-dot"></div><div class="subject-name">General Chemistry</div><div class="subject-credit">3 หน่วยกิต</div></div>
+      <div class="subject-item"><div class="subject-dot"></div><div class="subject-name">General Education Program (Life Values)</div><div class="subject-credit">3 หน่วยกิต</div></div>
+      <div class="subject-item"><div class="subject-dot"></div><div class="subject-name">Engineering Mechanics</div><div class="subject-credit">3 หน่วยกิต</div></div>
+      <div class="subject-item"><div class="subject-dot"></div><div class="subject-name">Pre-Activities For Engineers</div><div class="subject-credit">1 หน่วยกิต</div></div>
+      <div class="subject-item"><div class="subject-dot"></div><div class="subject-name">Foundation English</div><div class="subject-credit">3 หน่วยกิต</div></div>
     </div>
     <button class="back-btn" onclick="goTo('page-eng')">← กลับเลือกสาขา</button>
   </div>
 
+  <!--Description subject -->
+  <div id="subject-modal" class="modal" style="display:none;">
+  <div class="modal-content">
+    <h3 id="modal-title" style="color: var(--coral); margin-bottom: 10px; font-size: 1.5rem;">ชื่อวิชา</h3>
+    
+    <div id="modal-media" class="modal-media"></div>
+    
+    <p id="modal-desc" style="color: var(--white); font-size: 1rem; line-height: 1.6; margin-bottom: 20px; text-align: left;"></p>
+    
+    <button class="close-modal-btn" 
+            onclick="document.getElementById('subject-modal').style.display='none'"
+            data-th="ปิดหน้าต่าง" 
+            data-en="Close">ปิดหน้าต่าง</button>
+  </div>
+</div>
   <!-- TAB: ADMISSION -->
   <div id="tab-admission" class="tab-content">
     <div class="section-title" style="margin-bottom:14px;">📊 เกณฑ์การรับสมัคร</div>

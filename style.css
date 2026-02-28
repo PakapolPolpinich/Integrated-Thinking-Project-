@@ -180,7 +180,7 @@
   .tab-btn:hover,.tab-btn.active{background:linear-gradient(135deg,var(--coral),var(--orange));border-color:transparent;color:#fff;box-shadow:0 4px 20px rgba(255,107,107,0.4);}
 
   .year-tabs{display:flex;gap:8px;margin-bottom:20px;flex-wrap:wrap;}
-  .year-tab{background:var(--card-bg);border:1px solid var(--card-border);color:var(--muted);padding:10px 22px;border-radius:100px;font-size:0.9rem;cursor:pointer;font-family:'DM Serif Display',serif;font-weight:700;transition:all 0.2s;}
+  .year-tab{background:var(--card-bg);border:1px solid var(--card-border);color:var(--muted);padding:10px 22px;border-radius:100px;font-size:0.9rem;cursor:pointer;font-family:'Sarabun',serif;font-weight:400;transition:all 0.2s;}
   .year-tab:hover,.year-tab.active{background:linear-gradient(135deg,var(--coral),var(--orange));border-color:transparent;color:#fff;box-shadow:0 4px 16px rgba(255,107,107,0.35);}
 
   .curriculum-content{background:var(--card-bg);border:1px solid var(--card-border);border-radius:16px;padding:20px;margin-bottom:24px;backdrop-filter:blur(10px);}
@@ -237,3 +237,133 @@
 
   .tab-content{display:none;}
   .tab-content.active{display:block;animation:riseUp 0.3s ease;}
+
+/* --- ส่วนเพิ่มเติม: เทอมการศึกษา --- */
+
+
+/* ใน style.css */
+.term-tab-summer {
+    display: none; 
+}
+
+/* --- ส่วนของ Modal รายละเอียดวิชา --- */
+.modal {
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85); /* พื้นหลังสีดำโปร่งแสง */
+    z-index: 9999; /* สำคัญมาก! ต้องให้ค่าเยอะๆ เพื่อให้อยู่หน้าสุด */
+    display: none; 
+    justify-content: center; 
+    align-items: center;
+}
+
+
+/* แก้ไข .modal-content เดิม */
+.modal-content {
+    background: var(--bg); 
+    padding: 30px 20px; 
+    border-radius: 16px;
+    width: 90%; 
+    max-width: 700px; /* <--- ขยายหน้าต่างให้กว้างขึ้นตรงนี้ (เดิม 400px) */
+    max-height: 85vh; /* <--- ป้องกันหน้าต่างทะลุจอถ้ารายละเอียดเยอะ */
+    overflow-y: auto; /* <--- ถ้าเนื้อหายาวเกินไป ให้มีแถบเลื่อน (Scroll) */
+    text-align: center;
+    border: 1px solid var(--coral);
+    box-shadow: 0 4px 25px rgba(255, 107, 107, 0.5);
+    animation: popIn 0.3s ease-out;
+}
+
+/* --- เพิ่ม CSS สำหรับจัดการรูปและวิดีโอ --- */
+.modal-media {
+    width: 100%;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.modal-media img, 
+.modal-media iframe, 
+.modal-media video {
+    width: 100%;
+    max-height: 350px;
+    object-fit: cover; /* ให้รูปไม่เบี้ยว */
+    border-radius: 8px;
+}
+
+/* --- ส่วนเพิ่มเติม: ปุ่มปิด Modal ธีม Coral --- */
+.close-modal-btn {
+    /* พื้นหลังเริ่มต้นเป็นสี Coral ตามธีม */
+    background: var(--coral);
+    color: var(--white);
+    
+    /* ขอบและรัศมี (โค้ง) */
+    border: 1px solid var(--coral);
+    border-radius: 20px;
+    
+    /* ขนาดและตำแหน่ง */
+    padding: 10px 30px; /* ขยายให้ยาวขึ้นเล็กน้อยเพื่อให้อ่านง่าย */
+    margin-top: 20px; /* เว้นระยะจากรายละเอียดด้านบน */
+    
+    /* แบบอักษรและเอฟเฟกต์ */
+    font-family: 'Sarabun', sans-serif;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(255, 107, 107, 0.3); /* ใส่เงาเล็กน้อยเพื่อให้ดูมีมิติ */
+}
+
+/* เอฟเฟกต์ตอนเอาเมาส์ชี้ (Hover) */
+.close-modal-btn:hover {
+    background: transparent; /* เปลี่ยนเป็นพื้นหลังโปร่งแสง */
+    color: var(--coral); /* เปลี่ยนสีตัวอักษรเป็นสี Coral */
+    border-color: var(--coral); /* คงสีขอบไว้ */
+    box-shadow: 0 6px 15px rgba(255, 107, 107, 0.5); /* เพิ่มเงาตอนชี้เพื่อให้รู้สึกถึงการคลิก */
+}
+
+/* เอฟเฟกต์ตอนกด (Active) */
+.close-modal-btn:active {
+    transform: translateY(1px); /* กดแล้วยุบลงเล็กน้อย */
+    box-shadow: 0 2px 5px rgba(255, 107, 107, 0.2); /* ลดเงาลง */
+}
+
+/* แค่เติม .plan-tabs เข้าไปตรงนี้ */
+.year-tabs, .term-tabs, .plan-tabs {
+    display: flex;
+    gap: 10px;
+    margin: 15px 0;
+    justify-content: left;
+    flex-wrap: wrap;
+}
+
+/* เติม .plan-tab เข้าไปตรงนี้ */
+.year-tab, .term-tab, .plan-tab {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    color: var(--muted);
+    padding: 8px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-family: 'Sarabun', sans-serif;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    min-width: 80px;
+    text-align: center;
+}
+
+/* เติม .plan-tab.active เข้าไปตรงนี้ */
+.year-tab.active, .term-tab.active, .plan-tab.active {
+    background: var(--coral);
+    color: var(--white);
+    border-color: var(--coral);
+    box-shadow: 0 4px 10px rgba(255, 107, 107, 0.3);
+}
+
+.year-tab:hover, .term-tab:hover, .plan-tab:hover {
+    border-color: var(--coral);
+    color: var(--white);
+}
