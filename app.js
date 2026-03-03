@@ -114,122 +114,115 @@ function switchTab(name, btn) {
 const yearData = {
   1: {
     1: [
-      { name_en: 'Calculus I', name_th: 'แคลคูลัส 1', credit: '3', desc_en: 'Limits, continuity, derivatives, and applications.', desc_th: 'ศึกษาเกี่ยวกับลิมิต ความต่อเนื่อง อนุพันธ์ และการประยุกต์' },
-      { name_en: 'General Physics I', name_th: 'ฟิสิกส์ทั่วไป 1', credit: '3', desc_en: 'Basic mechanics, motion, and Newton\'s laws.', desc_th: 'กลศาสตร์เบื้องต้น การเคลื่อนที่ของวัตถุ และกฎของนิวตัน' },
-      { name_en: 'General Physics Laboratory I', name_th: 'ปฏิบัติการฟิสิกส์ทั่วไป 1', credit: '1', desc_en: 'Experiments related to General Physics I.', desc_th: 'ปฏิบัติการทดลองที่สอดคล้องกับเนื้อหาวิชาฟิสิกส์ทั่วไป 1' },
-      { name_en: 'General Chemistry', name_th: 'เคมีทั่วไป', credit: '3', desc_en: 'Atomic structure, chemical bonding, and stoichiometry.', desc_th: 'โครงสร้างอะตอม พันธะเคมี และปริมาณสัมพันธ์' },
-      { name_en: 'General Education Program (Life Values)', name_th: 'วิชาศึกษาทั่วไป (กลุ่มคุณค่าแห่งชีวิต)', credit: '3', desc_en: 'General education focusing on life values and ethics.', desc_th: 'วิชาศึกษาทั่วไป หมวดคุณค่าแห่งชีวิต' },
-      { name_en: 'Engineering Mechanics', name_th: 'กลศาสตร์วิศวกรรม', credit: '3', desc_en: 'Statics and dynamics principles for engineers.', desc_th: 'หลักการทางกลศาสตร์ สถิตยศาสตร์ และพลศาสตร์สำหรับวิศวกร' },
-      { name_en: 'Pre-Activities For Engineers', name_th: 'กิจกรรมเตรียมความพร้อมวิศวกร', credit: '3', desc_en: 'Preparatory activities and skills for engineering students.', desc_th: 'กิจกรรมเตรียมความพร้อมและทักษะสำหรับนักศึกษาวิศวกรรมศาสตร์' },
-      { name_en: 'Foundation English', name_th: 'ภาษาอังกฤษพื้นฐาน', credit: '3', desc_en: 'Basic English language skills for communication.', desc_th: 'ทักษะภาษาอังกฤษพื้นฐานเพื่อการสื่อสาร' }
+      { name_en: 'Calculus I', name_th: 'แคลคูลัส 1', credit: '3', desc_id: 'desc-cal1' },
+      { name_en: 'General Physics I', name_th: 'ฟิสิกส์ทั่วไป 1', credit: '3', desc_id: 'desc-phys1' },
+      { name_en: 'General Physics Laboratory I', name_th: 'ปฏิบัติการฟิสิกส์ทั่วไป 1', credit: '1', desc_id: 'desc-phys-lab1' },
+      { name_en: 'General Chemistry', name_th: 'เคมีทั่วไป', credit: '3', desc_id: 'desc-chem' },
+      { name_en: 'General Education Program (Life Values)', name_th: 'วิชาศึกษาทั่วไป (คุณค่าแห่งชีวิต)', credit: '3', desc_id: 'desc-gened-life' },
+      { name_en: 'Engineering Mechanics', name_th: 'กลศาสตร์วิศวกรรม', credit: '3', desc_id: 'desc-eng-mech' },
+      { name_en: 'Pre-Activities For Engineers', name_th: 'กิจกรรมเตรียมความพร้อมวิศวกร', credit: '3', desc_id: 'desc-pre-act' },
+      { name_en: 'Foundation English', name_th: 'ภาษาอังกฤษพื้นฐาน', credit: '3', desc_id: 'desc-eng-found' }
     ],
     2: [
-      { name_en: 'Calculus II', name_th: 'แคลคูลัส 2', credit: '3', desc_en: 'Integration techniques, sequences, and series.', desc_th: 'เทคนิคการอินทิเกรต ลำดับและอนุกรม' },
-      { name_en: 'General Physics II', name_th: 'ฟิสิกส์ทั่วไป 2', credit: '3', desc_en: 'Electromagnetism, optics, and modern physics.', desc_th: 'แม่เหล็กไฟฟ้า แสง และฟิสิกส์ยุคใหม่' },
-      { name_en: 'General Physics Laboratory II', name_th: 'ปฏิบัติการฟิสิกส์ทั่วไป 2', credit: '1', desc_en: 'Experiments related to General Physics II.', desc_th: 'ปฏิบัติการทดลองที่สอดคล้องกับเนื้อหาวิชาฟิสิกส์ทั่วไป 2' },
-      { name_en: 'General Chemistry Laboratory', name_th: 'ปฏิบัติการเคมีทั่วไป', credit: '1', desc_en: 'Basic chemistry experiments.', desc_th: 'ปฏิบัติการทดลองเคมีทั่วไปเบื้องต้น' },
-      { name_en: 'Computer Programing', name_th: 'การเขียนโปรแกรมคอมพิวเตอร์', credit: '3', desc_en: 'Introduction to computer programming for engineers.', desc_th: 'การเขียนโปรแกรมคอมพิวเตอร์เบื้องต้นสำหรับวิศวกร' },
-      { name_en: 'Materials For Electronics Engineering', name_th: 'วัสดุสำหรับวิศวกรรมอิเล็กทรอนิกส์', credit: '3', desc_en: 'Properties of materials used in electronic devices.', desc_th: 'คุณสมบัติของวัสดุที่ใช้ในอุปกรณ์อิเล็กทรอนิกส์' },
-      { name_en: 'Charm School', name_th: 'โรงเรียนสร้างเสน่ห์ (การพัฒนาบุคลิกภาพ)', credit: '2', desc_en: 'Personality development and social skills.', desc_th: 'การพัฒนาบุคลิกภาพและทักษะทางสังคม' },
-      { name_en: 'English For Communication', name_th: 'ภาษาอังกฤษเพื่อการสื่อสาร', credit: '3', desc_en: 'English skills for effective everyday communication.', desc_th: 'ทักษะภาษาอังกฤษเพื่อการสื่อสารในชีวิตประจำวัน' },
-      { name_en: 'Sport And Recreational Activities', name_th: 'กิจกรรมกีฬาและนันทนาการ', credit: '1', desc_en: 'Physical education and recreational sports.', desc_th: 'กิจกรรมพลศึกษาและกีฬาเพื่อสุขภาพ' },
-      { name_en: 'Team-Project I', name_th: 'โครงงานกลุ่ม 1', credit: '1', desc_en: 'Basic engineering teamwork and project execution.', desc_th: 'การทำงานเป็นทีมผ่านโครงงานวิศวกรรมเบื้องต้น' }
+      { name_en: 'Calculus II', name_th: 'แคลคูลัส 2', credit: '3', desc_id: 'desc-cal2' },
+      { name_en: 'General Physics II', name_th: 'ฟิสิกส์ทั่วไป 2', credit: '3', desc_id: 'desc-phys2' },
+      { name_en: 'General Physics Laboratory II', name_th: 'ปฏิบัติการฟิสิกส์ทั่วไป 2', credit: '1', desc_id: 'desc-phys-lab2' },
+      { name_en: 'General Chemistry Laboratory', name_th: 'ปฏิบัติการเคมีทั่วไป', credit: '1', desc_id: 'desc-chem-lab' },
+      { name_en: 'Computer Programing', name_th: 'การเขียนโปรแกรมคอมพิวเตอร์', credit: '3', desc_id: 'desc-comp-prog' },
+      { name_en: 'Materials For Electronics Engineering', name_th: 'วัสดุสำหรับวิศวกรรมอิเล็กทรอนิกส์', credit: '3', desc_id: 'desc-mat-elec' },
+      { name_en: 'Charm School', name_th: 'โรงเรียนสร้างเสน่ห์', credit: '2', desc_id: 'desc-charm' },
+      { name_en: 'English For Communication', name_th: 'ภาษาอังกฤษเพื่อการสื่อสาร', credit: '3', desc_id: 'desc-eng-comm' },
+      { name_en: 'Sport And Recreational Activities', name_th: 'กิจกรรมกีฬาและนันทนาการ', credit: '1', desc_id: 'desc-sport' },
+      { name_en: 'Team-Project I', name_th: 'โครงงานกลุ่ม 1', credit: '1', desc_id: 'desc-team1' }
     ]
   },
   2: {
     1: [
-      { name_en: 'Engineering Mathematics III', name_th: 'คณิตศาสตร์วิศวกรรม 3', credit: '3', desc_en: 'Differential equations and linear algebra.', desc_th: 'สมการเชิงอนุพันธ์และพีชคณิตเชิงเส้น' },
-      { name_en: 'Electronics Circuits Analysis I', name_th: 'การวิเคราะห์วงจรอิเล็กทรอนิกส์ 1', credit: '3', desc_en: 'Analysis of basic electronic circuits and components.', desc_th: 'การวิเคราะห์วงจรอิเล็กทรอนิกส์และอุปกรณ์พื้นฐาน' },
-      { name_en: 'Elcetronics Roadmap', name_th: 'เส้นทางสู่วิศวกรรมอิเล็กทรอนิกส์', credit: '1', desc_en: 'Guidance and career paths in electronics engineering.', desc_th: 'แนวทางการศึกษาและสายอาชีพทางวิศวกรรมอิเล็กทรอนิกส์' },
-      { name_en: 'Semiconductor Devices', name_th: 'อุปกรณ์สารกึ่งตัวนำ', credit: '3', desc_en: 'Theory and operation of semiconductor components.', desc_th: 'ทฤษฎีและการทำงานของอุปกรณ์สารกึ่งตัวนำ' },
-      { name_en: 'Digital And Logic Design', name_th: 'การออกแบบดิจิทัลและลอจิก', credit: '3', desc_en: 'Digital logic circuits and system design.', desc_th: 'วงจรลอจิกดิจิทัลและการออกแบบระบบ' },
-      { name_en: 'Electronics Laboratory I', name_th: 'ปฏิบัติการอิเล็กทรอนิกส์ 1', credit: '1', desc_en: 'Laboratory for basic electronics and digital circuits.', desc_th: 'ปฏิบัติการวงจรอิเล็กทรอนิกส์พื้นฐานและวงจรดิจิทัล' },
-      { name_en: 'General Education Program (Social Lifestyle Group)', name_th: 'วิชาศึกษาทั่วไป (กลุ่มวิถีสังคม)', credit: '3', desc_en: 'General education focusing on social sciences.', desc_th: 'วิชาศึกษาทั่วไป หมวดวิถีสังคม' },
-      { name_en: 'English For Academic Purposes', name_th: 'ภาษาอังกฤษเชิงวิชาการ', credit: '3', desc_en: 'English reading and writing for academic contexts.', desc_th: 'ภาษาอังกฤษสำหรับการอ่านและการเขียนเชิงวิชาการ' }
+      { name_en: 'Engineering Mathematics III', name_th: 'คณิตศาสตร์วิศวกรรม 3', credit: '3', desc_id: 'desc-math3' },
+      { name_en: 'Electronics Circuits Analysis I', name_th: 'การวิเคราะห์วงจรอิเล็กทรอนิกส์ 1', credit: '3', desc_id: 'desc-circ1' },
+      { name_en: 'Elcetronics Roadmap', name_th: 'เส้นทางสู่วิศวกรรมอิเล็กทรอนิกส์', credit: '1', desc_id: 'desc-roadmap' },
+      { name_en: 'Semiconductor Devices', name_th: 'อุปกรณ์สารกึ่งตัวนำ', credit: '3', desc_id: 'desc-semi' },
+      { name_en: 'Digital And Logic Design', name_th: 'การออกแบบดิจิทัลและลอจิก', credit: '3', desc_id: 'desc-digital' },
+      { name_en: 'Electronics Laboratory I', name_th: 'ปฏิบัติการอิเล็กทรอนิกส์ 1', credit: '1', desc_id: 'desc-elec-lab1' },
+      { name_en: 'General Education Program (Social Lifestyle)', name_th: 'วิชาศึกษาทั่วไป (วิถีสังคม)', credit: '3', desc_id: 'desc-gened-soc' },
+      { name_en: 'English For Academic Purposes', name_th: 'ภาษาอังกฤษเชิงวิชาการ', credit: '3', desc_id: 'desc-eng-acad' }
     ],
     2: [
-      { name_en: 'Engineering Mathematics IV', name_th: 'คณิตศาสตร์วิศวกรรม 4', credit: '3', desc_en: 'Advanced engineering math, complex variables.', desc_th: 'คณิตศาสตร์วิศวกรรมขั้นสูง ตัวแปรเชิงซ้อน' },
-      { name_en: 'Electromagnetic Fields', name_th: 'สนามแม่เหล็กไฟฟ้า', credit: '3', desc_en: 'Electromagnetic theory and applications.', desc_th: 'ทฤษฎีสนามแม่เหล็กไฟฟ้าและการประยุกต์' },
-      { name_en: 'Electronics Engineering I', name_th: 'วิศวกรรมอิเล็กทรอนิกส์ 1', credit: '3', desc_en: 'Principles and design of electronic systems.', desc_th: 'หลักการและการออกแบบระบบอิเล็กทรอนิกส์' },
-      { name_en: 'Electronics Circuits Analysis II', name_th: 'การวิเคราะห์วงจรอิเล็กทรอนิกส์ 2', credit: '3', desc_en: 'Advanced circuit analysis and frequency response.', desc_th: 'การวิเคราะห์วงจรขั้นสูงและการตอบสนองความถี่' },
-      { name_en: 'Embedded Systems And Applications', name_th: 'ระบบสมองกลฝังตัวและการประยุกต์', credit: '3', desc_en: 'Microcontrollers and embedded system design.', desc_th: 'ไมโครคอนโทรลเลอร์และการออกแบบระบบสมองกลฝังตัว' },
-      { name_en: 'Electronics Laboratory II', name_th: 'ปฏิบัติการอิเล็กทรอนิกส์ 2', credit: '1', desc_en: 'Laboratory for advanced circuits and embedded systems.', desc_th: 'ปฏิบัติการวงจรขั้นสูงและระบบสมองกลฝังตัว' },
-      { name_en: 'Electrical Instruments And Measurements', name_th: 'เครื่องมือวัดและการวัดทางไฟฟ้า', credit: '3', desc_en: 'Principles of electrical measurements and instruments.', desc_th: 'หลักการของเครื่องมือวัดและการวัดทางไฟฟ้า' },
-      { name_en: 'General Education Program (Language and Communication)', name_th: 'วิชาศึกษาทั่วไป (กลุ่มภาษาและการสื่อสาร)', credit: '3', desc_en: 'General education on communication skills.', desc_th: 'วิชาศึกษาทั่วไป หมวดภาษาและการสื่อสาร' },
-      { name_en: 'Team-Project II', name_th: 'โครงงานกลุ่ม 2', credit: '1', desc_en: 'Intermediate engineering teamwork project.', desc_th: 'การทำโครงงานวิศวกรรมเป็นทีมระดับกลาง' }
+      { name_en: 'Engineering Mathematics IV', name_th: 'คณิตศาสตร์วิศวกรรม 4', credit: '3', desc_id: 'desc-math4' },
+      { name_en: 'Electromagnetic Fields', name_th: 'สนามแม่เหล็กไฟฟ้า', credit: '3', desc_id: 'desc-em-field' },
+      { name_en: 'Electronics Engineering I', name_th: 'วิศวกรรมอิเล็กทรอนิกส์ 1', credit: '3', desc_id: 'desc-elec-eng1' },
+      { name_en: 'Electronics Circuits Analysis II', name_th: 'การวิเคราะห์วงจรอิเล็กทรอนิกส์ 2', credit: '3', desc_id: 'desc-circ2' },
+      { name_en: 'Embedded Systems And Applications', name_th: 'ระบบสมองกลฝังตัวและการประยุกต์', credit: '3', desc_id: 'desc-embed' },
+      { name_en: 'Electronics Laboratory II', name_th: 'ปฏิบัติการอิเล็กทรอนิกส์ 2', credit: '1', desc_id: 'desc-elec-lab2' },
+      { name_en: 'Electrical Instruments And Measurements', name_th: 'เครื่องมือวัดและการวัดทางไฟฟ้า', credit: '3', desc_id: 'desc-instrum' },
+      { name_en: 'General Education Program (Language)', name_th: 'วิชาศึกษาทั่วไป (ภาษาและการสื่อสาร)', credit: '3', desc_id: 'desc-gened-lang' },
+      { name_en: 'Team-Project II', name_th: 'โครงงานกลุ่ม 2', credit: '1', desc_id: 'desc-team2' }
     ]
   },
   3: {
     1: [
-      { name_en: 'Digital Integrated Circuits', name_th: 'วงจรรวมดิจิทัล', credit: '3', desc_en: 'Design and analysis of digital ICs.', desc_th: 'การออกแบบและการวิเคราะห์วงจรรวมดิจิทัล' },
-      { name_en: 'Electronics Engineering II', name_th: 'วิศวกรรมอิเล็กทรอนิกส์ 2', credit: '3', desc_en: 'Advanced electronics engineering concepts.', desc_th: 'แนวคิดวิศวกรรมอิเล็กทรอนิกส์ขั้นสูง' },
-      { name_en: 'Signal And Systems', name_th: 'สัญญาณและระบบ', credit: '3', desc_en: 'Continuous and discrete-time signals and systems.', desc_th: 'สัญญาณและระบบแบบต่อเนื่องและไม่ต่อเนื่อง' },
-      { name_en: 'Statistics And Data Analysis For Engineers', name_th: 'สถิติและการวิเคราะห์ข้อมูลสำหรับวิศวกร', credit: '3', desc_en: 'Statistical methods and data analysis.', desc_th: 'วิธีการทางสถิติและการวิเคราะห์ข้อมูล' },
-      { name_en: 'Electronics Laboratory III', name_th: 'ปฏิบัติการอิเล็กทรอนิกส์ 3', credit: '2', desc_en: 'Advanced electronics and signal laboratory.', desc_th: 'ปฏิบัติการอิเล็กทรอนิกส์ขั้นสูงและสัญญาณ' },
-      { name_en: 'Electronics Applications I', name_th: 'การประยุกต์ใช้อิเล็กทรอนิกส์ 1', credit: '1', desc_en: 'Practical applications of electronic theories.', desc_th: 'การประยุกต์ใช้งานทฤษฎีอิเล็กทรอนิกส์ภาคปฏิบัติ' },
-      { name_en: 'General Education Program (Thinking Skills)', name_th: 'วิชาศึกษาทั่วไป (กลุ่มทักษะการคิด)', credit: '3', desc_en: 'General education focusing on critical thinking.', desc_th: 'วิชาศึกษาทั่วไป หมวดทักษะการคิดวิเคราะห์' }
+      { name_en: 'Digital Integrated Circuits', name_th: 'วงจรรวมดิจิทัล', credit: '3', desc_id: 'desc-digi-ic' },
+      { name_en: 'Electronics Engineering II', name_th: 'วิศวกรรมอิเล็กทรอนิกส์ 2', credit: '3', desc_id: 'desc-elec-eng2' },
+      { name_en: 'Signal And Systems', name_th: 'สัญญาณและระบบ', credit: '3', desc_id: 'desc-signal' },
+      { name_en: 'Statistics And Data Analysis For Engineers', name_th: 'สถิติและการวิเคราะห์ข้อมูล', credit: '3', desc_id: 'desc-stat' },
+      { name_en: 'Electronics Laboratory III', name_th: 'ปฏิบัติการอิเล็กทรอนิกส์ 3', credit: '2', desc_id: 'desc-elec-lab3' },
+      { name_en: 'Electronics Applications I', name_th: 'การประยุกต์ใช้อิเล็กทรอนิกส์ 1', credit: '1', desc_id: 'desc-app1' },
+      { name_en: 'General Education Program (Thinking Skills)', name_th: 'วิชาศึกษาทั่วไป (ทักษะการคิด)', credit: '3', desc_id: 'desc-gened-think' }
     ],
     2: [
-      { name_en: 'Control Systems', name_th: 'ระบบควบคุม', credit: '3', desc_en: 'Feedback control systems and stability analysis.', desc_th: 'ระบบควบคุมป้อนกลับและการวิเคราะห์เสถียรภาพ' },
-      { name_en: 'Principles Of Communication', name_th: 'หลักการสื่อสาร', credit: '3', desc_en: 'Analog and digital communication principles.', desc_th: 'หลักการระบบสื่อสารแบบอนาล็อกและดิจิทัล' },
-      { name_en: 'Analog Integrated Circuits', name_th: 'วงจรรวมอนาล็อก', credit: '3', desc_en: 'Design of analog integrated circuits.', desc_th: 'การออกแบบวงจรรวมแบบอนาล็อก' },
-      { name_en: 'Digital Signal Processing', name_th: 'การประมวลผลสัญญาณดิจิทัล', credit: '3', desc_en: 'Discrete-time signals, Z-transforms, and filters.', desc_th: 'การประมวลผลสัญญาณดิจิทัลและการกรองความถี่' },
-      { name_en: 'Electronics Laboratory IV', name_th: 'ปฏิบัติการอิเล็กทรอนิกส์ 4', credit: '2', desc_en: 'Control systems and communication laboratory.', desc_th: 'ปฏิบัติการระบบควบคุมและระบบสื่อสาร' },
-      { name_en: 'Electronics Applications II', name_th: 'การประยุกต์ใช้อิเล็กทรอนิกส์ 2', credit: '3', desc_en: 'Advanced applications in electronics engineering.', desc_th: 'การประยุกต์ใช้งานวิศวกรรมอิเล็กทรอนิกส์ขั้นสูง' },
-      { name_en: 'Team-Project III', name_th: 'โครงงานกลุ่ม 3', credit: '1', desc_en: 'Pre-project and teamwork preparation for senior year.', desc_th: 'เตรียมความพร้อมสำหรับปริญญานิพนธ์และการทำงานกลุ่ม' },
-      { name_en: 'General Education Program (Management Science)', name_th: 'วิชาศึกษาทั่วไป (กลุ่มวิทยาการจัดการ)', credit: '3', desc_en: 'General education on management and business.', desc_th: 'วิชาศึกษาทั่วไป หมวดวิทยาการจัดการ' }
+      { name_en: 'Control Systems', name_th: 'ระบบควบคุม', credit: '3', desc_id: 'desc-control' },
+      { name_en: 'Principles Of Communication', name_th: 'หลักการสื่อสาร', credit: '3', desc_id: 'desc-comm' },
+      { name_en: 'Analog Integrated Circuits', name_th: 'วงจรรวมอนาล็อก', credit: '3', desc_id: 'desc-analog-ic' },
+      { name_en: 'Digital Signal Processing', name_th: 'การประมวลผลสัญญาณดิจิทัล', credit: '3', desc_id: 'desc-dsp' },
+      { name_en: 'Electronics Laboratory IV', name_th: 'ปฏิบัติการอิเล็กทรอนิกส์ 4', credit: '2', desc_id: 'desc-elec-lab4' },
+      { name_en: 'Electronics Applications II', name_th: 'การประยุกต์ใช้อิเล็กทรอนิกส์ 2', credit: '3', desc_id: 'desc-app2' },
+      { name_en: 'Team-Project III', name_th: 'โครงงานกลุ่ม 3', credit: '1', desc_id: 'desc-team3' },
+      { name_en: 'General Education Program (Management Science)', name_th: 'วิชาศึกษาทั่วไป (วิทยาการจัดการ)', credit: '3', desc_id: 'desc-gened-mgt' }
     ],
     3: [
-      { name_en: 'Industrial Training', name_th: 'การฝึกงานทางอุตสาหกรรม', credit: '0', desc_en: 'Summer internship in an engineering company.', desc_th: 'การฝึกประสบการณ์วิชาชีพในสถานประกอบการช่วงฤดูร้อน' }
+      { name_en: 'Industrial Training', name_th: 'การฝึกงานทางอุตสาหกรรม', credit: '0', desc_id: 'desc-ind-train' }
     ]
   },
   4: {
-    // -----------------------------------------
-    // แผน 1: โครงงาน/ปฏิบัติการ (Academic Project)
-    // -----------------------------------------
-    1: {
+    1: { // แผน 1: โครงงาน
       1: [
-        { name_en: 'Free Elective', name_th: 'วิชาเลือกเสรี', credit: '3', desc_en: 'Elective course of the student\'s choice.', desc_th: 'รายวิชาเลือกเสรีตามความสนใจของนักศึกษา' },
-        { name_en: 'Elective In Electronics', name_th: 'วิชาเลือกทางอิเล็กทรอนิกส์ ', credit: '3', desc_en: 'Specialized elective.', desc_th: 'วิชาเลือกเฉพาะทางวิศวกรรมอิเล็กทรอนิกส์' },
-        { name_en: 'Elective In Electronics', name_th: 'วิชาเลือกทางอิเล็กทรอนิกส์ ', credit: '3', desc_en: 'Specialized elective (3 credits).', desc_th: 'วิชาเลือกเฉพาะทางวิศวกรรมอิเล็กทรอนิกส์ (3 หน่วยกิต)' },
-        { name_en: 'Elective In Electronics', name_th: 'วิชาเลือกทางอิเล็กทรอนิกส์ ', credit: '3', desc_en: 'Specialized elective.', desc_th: 'วิชาเลือกเฉพาะทางวิศวกรรมอิเล็กทรอนิกส์' },
-        { name_en: 'Project I', name_th: 'ปริญญานิพนธ์ 1', credit: '3', desc_en: 'Senior engineering project proposal.', desc_th: 'โครงร่างปริญญานิพนธ์และการทดลองเบื้องต้น' }
+        { name_en: 'Free Elective', name_th: 'วิชาเลือกเสรี', credit: '3', desc_id: 'desc-free-elec' },
+        { name_en: 'Elective In Electronics', name_th: 'วิชาเลือกทางอิเล็กทรอนิกส์ ', credit: '3', desc_id: 'desc-elec-elec' },
+        { name_en: 'Elective In Electronics', name_th: 'วิชาเลือกทางอิเล็กทรอนิกส์ ', credit: '3', desc_id: 'desc-elec-elec' },
+        { name_en: 'Elective In Electronics', name_th: 'วิชาเลือกทางอิเล็กทรอนิกส์ ', credit: '3', desc_id: 'desc-elec-elec' },
+        { name_en: 'Project I', name_th: 'ปริญญานิพนธ์ 1', credit: '3', desc_id: 'desc-proj1' }
       ],
       2: [
-        { name_en: 'Free Elective', name_th: 'วิชาเลือกเสรี', credit: '3', desc_en: 'Elective course of the student\'s choice.', desc_th: 'รายวิชาเลือกเสรีตามความสนใจของนักศึกษา' },
-        { name_en: 'Elective In Electronics', name_th: 'วิชาเลือกทางอิเล็กทรอนิกส์ ', credit: '3', desc_en: 'Specialized elective.', desc_th: 'วิชาเลือกเฉพาะทางวิศวกรรมอิเล็กทรอนิกส์' },
-        { name_en: 'General Education Program', name_th: 'วิชาศึกษาทั่วไป', credit: '3', desc_en: 'General education requirements.', desc_th: 'วิชาศึกษาทั่วไป' },
-        { name_en: 'Senior Seminar', name_th: 'สัมมนาทางวิศวกรรม', credit: '3', desc_en: 'Presentation and discussion.', desc_th: 'การนำเสนอและอภิปรายหัวข้อทางวิศวกรรมสมัยใหม่' },
-        { name_en: 'Project II', name_th: 'ปริญญานิพนธ์ 2', credit: '3', desc_en: 'Final execution and presentation.', desc_th: 'การจัดทำชิ้นงานปริญญานิพนธ์และนำเสนอผลงาน' }
+        { name_en: 'Free Elective', name_th: 'วิชาเลือกเสรี', credit: '3', desc_id: 'desc-free-elec' },
+        { name_en: 'Elective In Electronics', name_th: 'วิชาเลือกทางอิเล็กทรอนิกส์ ', credit: '3', desc_id: 'desc-elec-elec' },
+        { name_en: 'General Education Program', name_th: 'วิชาศึกษาทั่วไป', credit: '3', desc_id: 'desc-gened-general' },
+        { name_en: 'Senior Seminar', name_th: 'สัมมนาทางวิศวกรรม', credit: '3', desc_id: 'desc-seminar' },
+        { name_en: 'Project II', name_th: 'ปริญญานิพนธ์ 2', credit: '3', desc_id: 'desc-proj2' }
       ]
     },
-
-    // -----------------------------------------
-    // แผน 2: สหกิจศึกษา (Cooperative Education)
-    // -----------------------------------------
-    2: {
+    2: { // แผน 2: สหกิจศึกษา
       1: [
-        // เทอม 1 ของเด็กสหกิจมักจะต้องเรียนอัดแน่นนิดนึง (คุณสามารถแก้รายวิชาตามหลักสูตรจริงได้เลยครับ)
-        { name_en: 'Cooperative Education', name_th: 'สหกิจศึกษา', credit: '6', desc_en: 'Full-time internship in an industrial enterprise.', desc_th: 'การปฏิบัติงานจริงในสถานประกอบการเต็มเวลา เป็นเวลาไม่น้อยกว่า 16 สัปดาห์' }
+        { name_en: 'Cooperative Education', name_th: 'สหกิจศึกษา', credit: '6', desc_id: 'desc-coop' }
       ],
       2: [
-        // เทอม 2 ไปสหกิจศึกษา (ออกไปทำงานสถานประกอบการเต็มเวลา)
-        { name_en: 'Free Elective', name_th: 'วิชาเลือกเสรี', credit: '3', desc_en: 'Elective course.', desc_th: 'รายวิชาเลือกเสรีตามความสนใจ' },
-        { name_en: 'Free Elective', name_th: 'วิชาเลือกเสรี', credit: '3', desc_en: 'Elective course.', desc_th: 'รายวิชาเลือกเสรีตามความสนใจ' },
-        { name_en: 'Elective In Electronics', name_th: 'วิชาเลือกทางอิเล็กทรอนิกส์', credit: '3', desc_en: 'Specialized elective.', desc_th: 'วิชาเลือกเฉพาะทางวิศวกรรมอิเล็กทรอนิกส์ (3 หน่วยกิต)' },
-        { name_en: 'Elective In Electronics', name_th: 'วิชาเลือกทางอิเล็กทรอนิกส์', credit: '3', desc_en: 'Specialized elective.', desc_th: 'วิชาเลือกเฉพาะทางวิศวกรรมอิเล็กทรอนิกส์ (3 หน่วยกิต)' },
-        { name_en: 'Elective In Electronics', name_th: 'วิชาเลือกทางอิเล็กทรอนิกส์', credit: '3', desc_en: 'Specialized elective.', desc_th: 'วิชาเลือกเฉพาะทางวิศวกรรมอิเล็กทรอนิกส์ (3 หน่วยกิต)' },
-        { name_en: 'Elective In Electronics', name_th: 'วิชาเลือกทางอิเล็กทรอนิกส์', credit: '3', desc_en: 'Specialized elective.', desc_th: 'วิชาเลือกเฉพาะทางวิศวกรรมอิเล็กทรอนิกส์ (3 หน่วยกิต)' },
-        { name_en: 'General Education Program', name_th: 'วิชาศึกษาทั่วไป', credit: '3', desc_en: 'General education requirements.', desc_th: 'วิชาศึกษาทั่วไป' },
-       { name_en: 'Senior Seminar', name_th: 'สัมมนาทางวิศวกรรม', credit: '3', desc_en: 'Presentation and discussion.', desc_th: 'การนำเสนอและอภิปรายหัวข้อทางวิศวกรรมสมัยใหม่' },
+        { name_en: 'Free Elective', name_th: 'วิชาเลือกเสรี', credit: '3', desc_id: 'desc-free-elec' },
+        { name_en: 'Free Elective', name_th: 'วิชาเลือกเสรี', credit: '3', desc_id: 'desc-free-elec' },
+        { name_en: 'Elective In Electronics', name_th: 'วิชาเลือกทางอิเล็กทรอนิกส์', credit: '3', desc_id: 'desc-elec-elec' },
+        { name_en: 'Elective In Electronics', name_th: 'วิชาเลือกทางอิเล็กทรอนิกส์', credit: '3', desc_id: 'desc-elec-elec' },
+        { name_en: 'Elective In Electronics', name_th: 'วิชาเลือกทางอิเล็กทรอนิกส์', credit: '3', desc_id: 'desc-elec-elec' },
+        { name_en: 'Elective In Electronics', name_th: 'วิชาเลือกทางอิเล็กทรอนิกส์', credit: '3', desc_id: 'desc-elec-elec' },
+        { name_en: 'General Education Program', name_th: 'วิชาศึกษาทั่วไป', credit: '3', desc_id: 'desc-gened-general' },
+        { name_en: 'Senior Seminar', name_th: 'สัมมนาทางวิศวกรรม', credit: '1', desc_id: 'desc-seminar' }
       ]
     }
   }
 };
+  
 
 // 1. กำหนดค่าเริ่มต้นเป็น ปี 1 เทอม 1
 let currentYear = 1;
 let currentTerm = 1;
+let currentModalSubject = null;
 
 // 2. ฟังก์ชันสลับปี
 function switchYear(yr) {
@@ -305,49 +298,80 @@ function renderSubjects() {
 }
 
 // 💡 เปลี่ยนจากรับ 3 ค่า เป็นรับ 4 ค่า (เพิ่ม plan เข้ามา)
+// 2. ฟังก์ชันเปิดหน้าต่าง (ทำหน้าที่แค่ดึงวิชามาเก็บไว้ แล้วสั่งแสดงผล)
 function showDetail(year, plan, term, index) {
-  
-  let subject;
-  
-  // 💡 จุดที่แก้ไข: เช็คว่าถ้าเป็นปี 4 ต้องดึงข้อมูลแยกตามแผนการเรียน
+  // เก็บข้อมูลวิชาที่กดลงในตัวแปรกลาง
   if (year === 4) {
-      subject = yearData[4][plan][term][index];
+      currentModalSubject = yearData[4][plan][term][index];
   } else {
-      // ปี 1-3 ดึงแบบปกติ (ไม่สนแผน)
-      subject = yearData[year][term][index];
+      currentModalSubject = yearData[year][term][index];
   }
   
+  // เรียกฟังก์ชันวาดเนื้อหา
+  renderModalContent();
+  
+  // โชว์หน้าต่าง Modal
+  document.getElementById('subject-modal').style.display = 'flex';
+}
+
+// 3. ฟังก์ชันวาดเนื้อหา (แยกออกมาต่างหาก เพื่อให้เรียกซ้ำได้เวลากดเปลี่ยนภาษา!)
+function renderModalContent() {
+  // ถ้าไม่ได้เปิดหน้าต่างวิชาไหนอยู่เลย ให้ข้ามไป
+  if (!currentModalSubject) return;
+
   const titleEl = document.getElementById('modal-title');
   const descEl = document.getElementById('modal-desc');
+  const mediaContainer = document.getElementById('modal-media');
 
-  // เช็คภาษาจากปุ่ม EN
+  // เช็คภาษาปัจจุบัน
   const btnEn = document.getElementById('btn-en');
   const currentLang = (btnEn && btnEn.classList.contains('active')) ? 'en' : 'th';
 
-  titleEl.setAttribute('data-th', subject.name_th);
-  titleEl.setAttribute('data-en', subject.name_en);
+  // อัปเดตชื่อวิชา
+  titleEl.innerText = currentLang === 'en' ? currentModalSubject.name_en : currentModalSubject.name_th;
   
-  descEl.setAttribute('data-th', subject.desc_th);
-  descEl.setAttribute('data-en', subject.desc_en);
-
-  // กำหนดข้อความให้ตรงกับปุ่มภาษาที่ผู้ใช้กดไว้
-  if (currentLang === 'en') {
-      titleEl.innerText = subject.name_en;
-      descEl.innerText = subject.desc_en;
+  // อัปเดตเนื้อหารายละเอียด
+  if (currentModalSubject.desc_id) {
+      const hiddenContent = document.getElementById(currentModalSubject.desc_id + '-' + currentLang);
+      if (hiddenContent) {
+          descEl.innerHTML = hiddenContent.innerHTML;
+      } else {
+          descEl.innerHTML = currentLang === 'en' ? '<p style="text-align:center;">Coming soon...</p>' : '<p style="text-align:center;">กำลังอัปเดตข้อมูล...</p>';
+      }
   } else {
-      titleEl.innerText = subject.name_th;
-      descEl.innerText = subject.desc_th;
+      descEl.innerHTML = currentLang === 'en' ? 'No data' : 'ไม่มีข้อมูล';
   }
   
-  const mediaContainer = document.getElementById('modal-media');
-  if (subject.media) {
-    mediaContainer.innerHTML = subject.media;
+  // จัดการรูป/วิดีโอ
+  if (currentModalSubject.media) {
+    mediaContainer.innerHTML = currentModalSubject.media;
     mediaContainer.style.display = 'block';
   } else {
     mediaContainer.style.display = 'none';
   }
-  
-  document.getElementById('subject-modal').style.display = 'flex';
+}
+// 4. ดักจับการกดปุ่มเปลี่ยนภาษา
+// สมมติว่าปุ่มเปลี่ยนภาษาอังกฤษของคุณชื่อ id="btn-en"
+const btnEn = document.getElementById('btn-en');
+if (btnEn) {
+    btnEn.addEventListener('click', () => {
+        // ใช้ setTimeout หน่วงเวลาเสี้ยววินาที เพื่อให้โค้ดระบบเปลี่ยนภาษาเดิมของคุณทำงาน (สลับคลาส active) ให้เสร็จก่อน
+        setTimeout(() => {
+            renderSubjects();      // รีเฟรชรายวิชาด้านหลัง
+            renderModalContent();  // รีเฟรชเนื้อหาในหน้าต่าง (ถ้าเปิดค้างอยู่)
+        }, 50);
+    });
+}
+
+// ถ้าคุณมีปุ่มภาษาไทยด้วย (สมมติชื่อ id="btn-th") ก็ทำแบบเดียวกันครับ
+const btnTh = document.getElementById('btn-th');
+if (btnTh) {
+    btnTh.addEventListener('click', () => {
+        setTimeout(() => {
+            renderSubjects();      
+            renderModalContent();  
+        }, 50);
+    });
 }
 // 🎯 6. สำคัญที่สุด: สั่งทำงานทันทีตอนโหลดหน้าเว็บ 
 // เพื่อให้ข้อมูลชุดแรกขึ้นมาพร้อมให้กดได้เลย
