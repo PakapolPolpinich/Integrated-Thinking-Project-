@@ -225,7 +225,27 @@
   .job-item{background:rgba(255,107,107,0.08);border:1px solid rgba(255,107,107,0.15);border-radius:14px;padding:14px;text-align:center;}
   .ji-icon{font-size:1.5rem;margin-bottom:6px;}
   .ji-name{font-size:0.75rem;color:var(--white);line-height:1.3;font-weight:500;}
+ .job-logo{
+  width:56px;
+  height:56px;
+  margin:0 auto 10px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
 
+  background:rgba(255,255,255,0.06);
+  border:1px solid var(--card-border);
+  border-radius:14px;
+  overflow:hidden;
+}
+
+.job-logo img{
+  width:100%;
+  height:100%;
+  object-fit:contain;   /* กันรูปบวม */
+  padding:8px;          /* กันชิดขอบ */
+}
+.ji-sub{font-size:0.7rem;opacity:0.65;}
   .review-card{background:var(--card-bg);border:1px solid var(--card-border);border-radius:16px;padding:18px;margin-bottom:12px;}
   .review-stars{color:var(--yellow);font-size:0.8rem;margin-bottom:6px;}
   .review-text{font-size:0.85rem;color:#d4b8b8;line-height:1.7;margin-bottom:8px;}
